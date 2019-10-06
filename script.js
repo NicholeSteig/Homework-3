@@ -4,10 +4,15 @@ var numChar = confirm("Use numbers?");
 var lowChar = confirm("Use lowercase letters?");
 var upChar = confirm("Use uppercase characters?");
 
+var specialArray = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
+var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var lowerArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
 var numArray = [];
 var passArray = [];
 
-if (charNum)
+
 
     //all false
 
@@ -24,10 +29,13 @@ if (charNum)
 if (specChar === true && numChar === false && lowChar === false && upChar === false) {
 
     for (var i = 0; i < charNum; i++) {
+        
 
-        var num = Math.floor(Math.random() * 30) + 1;
+       var charArray = specialArray;
+       
+        var num = Math.floor(Math.random() * charArray.length ) + 1;
 
-        var charArray = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
+        
 
         console.log(num);
 
@@ -48,6 +56,9 @@ if (specChar === true && numChar === false && lowChar === false && upChar === fa
 
 
     }
-
-    console.log(passArray);
     
+
+console.log(passArray);
+
+alert("Your password is: " + passArray)
+

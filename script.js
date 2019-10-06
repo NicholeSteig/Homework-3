@@ -14,12 +14,12 @@ var passArray = [];
 
 
 
-    //all false
+//all false
 
-    if (specChar === false && numChar === false && lowChar === false && upChar === false) {
+if (specChar === false && numChar === false && lowChar === false && upChar === false) {
 
-        alert("Invalid choices");
-    }
+    alert("Invalid choices");
+}
 
 
 //just special
@@ -29,36 +29,402 @@ var passArray = [];
 if (specChar === true && numChar === false && lowChar === false && upChar === false) {
 
     for (var i = 0; i < charNum; i++) {
-        
 
-       var charArray = specialArray;
-       
-        var num = Math.floor(Math.random() * charArray.length ) + 1;
 
-        
+        var charArray = specialArray;
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
 
         console.log(num);
 
-        
+
         numArray.push(num);
 
         console.log(numArray);
 
-        
 
 
-            passArray.push(charArray[num]);
-        
 
-        }
-
-        
+        passArray.push(charArray[num]);
 
 
     }
-    
 
-console.log(passArray);
 
-alert("Your password is: " + passArray)
+
+
+}
+
+
+//just numbers
+if (specChar === false && numChar === true && lowChar === false && upChar === false) {
+
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = numberArray;
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+
+
+    }
+}
+//just lower
+if (specChar === false && numChar === false && lowChar === true && upChar === false)
+
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = lowerArray;
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+
+
+    }
+
+//just upper
+if (specChar === false && numChar === false && lowChar === false && upChar === true) {
+
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = upperArray;
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+
+
+    }
+}
+//special and numbers
+if (specChar === true && numChar === true && lowChar === false && upChar === false)
+
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = specialArray.concat(numberArray);
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+
+
+    }
+
+//special and lower
+if (specChar === true && numChar === false && lowChar === true && upChar === false) {
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = specialArray.concat(lowerArray);
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+
+
+    }
+}
+//special and upper
+if (specChar === true && numChar === false && lowChar === false && upChar === true)
+
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = specialArray.concat(upperArray);
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+
+
+    }
+//numbers and lower
+if (specChar === false && numChar === true && lowChar === true && upChar === false)
+
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = numberArray.concat(lowerArray);
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+
+
+    }
+//numbers and upper
+if (specChar === false && numChar === true && lowChar === false && upChar === true) {
+
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = numberArray.concat(upperArray);
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+
+    }
+}
+//lower and upper
+if (specChar === false && numChar === false && lowChar === true && upChar === true) {
+
+    for (var i = 0; i < charNum; i++) {
+
+
+        var charArray = lowerArray.concat(upperArray);
+
+        var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+        console.log(num);
+
+
+        numArray.push(num);
+
+        console.log(numArray);
+
+
+
+
+        passArray.push(charArray[num]);
+    }
+}
+    //special, numbers, and lower
+    if (specChar === true && numChar === true && lowChar === true && upChar === false) {
+
+        for (var i = 0; i < charNum; i++) {
+
+
+            var charArray = numberArray.concat(lowerArray);
+
+            var num = Math.floor(Math.random() * charArray.length) + 1;
+
+
+
+            console.log(num);
+
+
+            numArray.push(num);
+
+            console.log(numArray);
+
+
+
+
+            passArray.push(charArray[num]);
+
+        }
+    }
+
+
+    //special, numbers, and upper
+    if (specChar === true && numChar === true && lowChar === false && upChar === true){
+
+        for (var i = 0; i < charNum; i++) {
+        
+
+            var charArray = specialArray.concat(numberArray, upperArray);
+            
+             var num = Math.floor(Math.random() * charArray.length ) + 1;
+     
+             
+     
+             console.log(num);
+     
+             
+             numArray.push(num);
+     
+             console.log(numArray);
+     
+             
+     
+     
+                 passArray.push(charArray[num]);
+        }
+    }
+        //special, lower, and upper
+        if (specChar === true && numChar === false && lowChar === true && upChar === true){
+
+            for (var i = 0; i < charNum; i++) {
+        
+
+                var charArray = specialArray.concat(lowerArray, upperArray);
+                
+                 var num = Math.floor(Math.random() * charArray.length ) + 1;
+         
+                 
+         
+                 console.log(num);
+         
+                 
+                 numArray.push(num);
+         
+                 console.log(numArray);
+         
+                 
+         
+         
+                     passArray.push(charArray[num]);
+            }
+        }
+            //numbers, lower, and upper
+            if (specChar === false && numChar === true && lowChar === true && upChar === true){
+
+                for (var i = 0; i < charNum; i++) {
+        
+
+                    var charArray = numberArray.concat(lowerArray, upperArray);
+                    
+                     var num = Math.floor(Math.random() * charArray.length ) + 1;
+             
+                     
+             
+                     console.log(num);
+             
+                     
+                     numArray.push(num);
+             
+                     console.log(numArray);
+             
+                     
+             
+             
+                         passArray.push(charArray[num]);
+                }
+            }
+                //all characters
+                if (specChar === true && numChar === true && lowChar === true && upChar === true){
+                    for (var i = 0; i < charNum; i++) {
+        
+
+                        var charArray = specialArray.concat(numberArray, lowerArray, upperArray);
+                        
+                         var num = Math.floor(Math.random() * charArray.length ) + 1;
+                 
+                         
+                 
+                         console.log(num);
+                 
+                         
+                         numArray.push(num);
+                 
+                         console.log(numArray);
+                 
+                         
+                 
+                 
+                             passArray.push(charArray[num]);
+                    }
+                }
+
+
+                    console.log(passArray);
+
+    alert("Your password is: " + passArray)
 

@@ -4,70 +4,36 @@ var numChar = confirm("Use numbers?");
 var lowChar = confirm("Use lowercase letters?");
 var upChar = confirm("Use uppercase characters?");
 
-//all false
+var numArray = [];
 
-if (specChar === false && numChar === false && lowChar === false && upChar === false) {
+if (charNum)
 
-    alert("Invalid choices");
-}
+    //all false
+
+    if (specChar === false && numChar === false && lowChar === false && upChar === false) {
+
+        alert("Invalid choices");
+    }
 
 
 //just special
 
-if (specChar === true && numChar === false && lowChar === false && upChar === false)
 
-    //just numbers
 
-    if (specChar === false && numChar === true && lowChar === false && upChar === false)
+if (specChar === true && numChar === false && lowChar === false && upChar === false) {
 
-        //just lower
+    for (var i = 0; i < charNum; i++) {
 
-        if (specChar === false && numChar === false && lowChar === true && upChar === false)
+        var num = Math.floor(Math.random() * 32) + 1;
 
-            //just upper
 
-            if (specChar === false && numChar === false && lowChar === false && upChar === true)
+        console.log(num);
+        
+        numArray.push(num);
 
-                //special and numbers
+        console.log(numArray);
 
-                if (specChar === true && numChar === true && lowChar === false && upChar === false)
 
-                    //special and lower
+    }
 
-                    if (specChar === true && numChar === false && lowChar === true && upChar === false)
-
-                        //special and upper
-
-                        if (specChar === true && numChar === false && lowChar === false && upChar === true)
-
-                            //numbers and lower
-
-                            if (specChar === false && numChar === true && lowChar === true && upChar === false)
-
-                                //numbers and upper
-
-                                if (specChar === false && numChar === true && lowChar === false && upChar === true)
-
-                                    //lower and upper
-
-                                    if (specChar === false && numChar === false && lowChar === true && upChar === true)
-
-                                        //special, numbers, and lower
-
-                                        if (specChar === true && numChar === true && lowChar === true && upChar === false)
-
-                                            //special, numbers, and upper
-
-                                            if (specChar === true && numChar === true && lowChar === false && upChar === true)
-
-                                                //special, lower, and upper
-
-                                                if (specChar === true && numChar === false && lowChar === true && upChar === true)
-
-                                                    //numbers, lower, and upper
-
-                                                    if (specChar === false && numChar === true && lowChar === true && upChar === true)
-
-                                                        //all characters
-
-                                                        if (specChar === true && numChar === true && lowChar === true && upChar === true)
+}
